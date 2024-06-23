@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+<style>
+  nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    background-color: #5c4a49;
+  }
+  
+  /* Style the menu items */
+  .menu {
+    text-align: center;
+  }
+  
+  .menu-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: ##5c4a49;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+   body {
+    background-color: #a3958c; 
+  }
+  scrollToTop {
+    display: none; /* Initially hide the button */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5c4a49;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<header>
+  <center>
+    <h1> OBUS MO'TO MISMO</h1>
+  </center>
+</header>
+<nav>
+  <a href="#mainsdish">Main Dish</a>
+  <a href="#vegetable">Vegetable</a>
+  <a href="#desserts">Desserts</a>
+  <a href="#drinks">Drinks</a>
+  <a href="#add-ons">Add-ons</a>
+</nav>
+
+<div id="mainsdish" class="menu">
+<div id="recordsList">
+  </div>
+     <h3><div id="total" data-total="0">Total: Php 0.00</div> </h3>
+	 
+  <h2>MAIN DISH</h2>
+  
+  <div class="menu-item">
+    <img src="sushi.jpeg" alt="Sushi">
+    <h3>Sushi</h3>
+    <form>
+      <input type="radio" id="sushi" name="options" value="sushi">
+      <label for="sushi">Php 230.00</label><br>
+     <button type="button" onclick="deselectOption('sushi')">Deselect</button>
+      <button type="button" onclick="addRecord('Sushi', 230)">Add Order</button>
+    </form>
+  </div>
+  
+  <div class="menu-item">
+    <img src="Ramen.jpeg" alt="Ramen">
+    <h3>Ramen</h3>
+    <form>
+      <input type="radio" id="ramen" name="options" value="ramen">
+      <label for="ramen">Php 198.00</label><br>
+      <button type="button" onclick="deselectOption('ramen')">Deselect</button>
+      <button type="button" onclick="addRecord('Ramen', 198)">Add Order</button>
+    </form>
+  </div>
+  
+  
+</div>
+
+
+
+<div id="vegetable" class="menu">
+  <h2>VEGETABLE</h2>
+  <div class="menu-item">
+    <img src="vege2.jpg" alt="vege">
+    <h3>Sunomono</h3>
+	 <form>
+      <input type="radio" id="sunomono" name="options" value="sunomono">
+      <label for="sunomono">Php 158.00</label><br>
+      <button type="button" onclick="deselectOption('sunomono')">Deselect</button>
+      <button type="button" onclick="addRecord('Sunomono', 158)">Add Order</button>
+    </form>
+  </div>
+  <div class="menu-item">
+    <img src="vege1.jpg" alt="Main Course 2">
+    <h3>Simmered Kobocha</h3>
+   
+	<form>
+      <input type="radio" id="sk" name="options" value="sk">
+      <label for="sk">Php 168.00</label><br>
+      <button type="button" onclick="deselectOption('sk')">Deselect</button>
+      <button type="button" onclick="addRecord('Simmered Kobocha', 168)">Add Order</button>
+    </form>	
+  </div>
+ 
+</div>
+
+
+<div id="desserts" class="menu">
+  <h2>DESSERTS</h2>
+  <div class="menu-item">
+    <img src="D2.jpg" alt="Dessert 1">
+    <h3>Black Sesame Cookies</h3>
+	<form>
+      <input type="radio" id="bs" name="options" value="bs">
+      <label for="bs">Php 228.00</label><br>
+      <button type="button" onclick="deselectOption('bs')">Deselect</button>
+      <button type="button" onclick="addRecord('Black Sesame Cookies', 228)">Add Order</button>
+    </form>
+  </div>
+  <div class="menu-item">
+    <img src="D1.jpg" alt="Dessert 2">
+    <h3>Japanese Chessecake</h3>
+	<form>
+      <input type="radio" id="jc" name="options" value="jc">
+      <label for="jc">Php 118.00</label><br>
+      <button type="button" onclick="deselectOption('jc')">Deselect</button>
+      <button type="button" onclick="addRecord('Japanese Chessecake', 118)">Add Order</button>
+    </form>
+  </div>
+</div>
+
+<div id="drinks" class="menu">
+  <h2>DRINKS</h2>
+  <div class="menu-item">
+    <img src="A1.jpeg" alt="Drink 1">
+    <h3>Bubble Tea</h3>
+
+	<form>
+      <input type="radio" id="bt" name="options" value="bt">
+      <label for="bt">Php 128.00</label><br>
+      <button type="button" onclick="deselectOption('bt')">Deselect</button>
+      <button type="button" onclick="addRecord('Bubble Tea', 128)">Add Order</button>
+    </form>
+  </div>
+  <div class="menu-item">
+    <img src="A2.jpeg" alt="Drink 2">
+    <h3>Melon Soda</h3>
+	<form>
+      <input type="radio" id="ms" name="options" value="ms">
+      <label for="ms">Php 128.00</label><br>
+      <button type="button" onclick="deselectOption('ms')">Deselect</button>
+      <button type="button" onclick="addRecord('Melon Soda', 128)">Add Order</button>
+    </form>
+  </div>
+</div>
+
+<div id="add-ons" class="menu">
+  <h2>ADD-ONS</h2>
+  <div class="menu-item">
+    <img src="Add1.jpeg" alt="add">
+    <h3>Omelette</h3>
+    
+	<form>
+      <input type="radio" id="omelette" name="options" value="omelette">
+      <label for="omelette">Php 110.00</label><br>
+      <button type="button" onclick="deselectOption('omelette')">Deselect</button>
+      <button type="button" onclick="addRecord('Omelette', 110)">Add Order</button>
+    </form>
+  </div>
+  <div class="menu-item">
+    <img src="Add2.jpeg" alt="add">
+    <h3>Mochi Ice Cream</h3>
+   
+	<form>
+      <input type="radio" id="mic" name="options" value="mic">
+      <label for="mic">Php 128.00</label><br>
+      <button type="button" onclick="deselectOption('mic')">Deselect</button>
+      <button type="button" onclick="addRecord('Mochi Ice Cream', 128)">Add Order</button>
+    </form>
+  </div>
+</div>
+
+ 
+  <script>
+        function deselectOption(optionId) {
+            var option = document.getElementById(optionId);
+            option.checked = false;
+        }
+
+        function addRecord(itemName, price) {
+            var recordsList = document.getElementById('recordsList');
+            var newItem = document.createElement('div');
+            var deleteButton = document.createElement('button');
+            deleteButton.textContent = 'X';
+            deleteButton.onclick = function() {
+                deleteRecord(this.parentNode);
+            };
+            newItem.textContent = itemName + ': Php ' + price.toFixed(2);
+            newItem.appendChild(deleteButton);
+            recordsList.appendChild(newItem);
+            
+           
+            var totalElement = document.getElementById('total');
+            var currentTotal = parseFloat(totalElement.getAttribute('data-total'));
+            var newTotal = currentTotal + price;
+            totalElement.setAttribute('data-total', newTotal);
+            totalElement.textContent = 'Total: Php ' + newTotal.toFixed(2);
+        }
+
+        function deleteRecord(record) {
+            var priceStr = record.textContent.split(':')[1].trim();
+            var price = parseFloat(priceStr.replace('Php', '').trim());
+            var totalElement = document.getElementById('total');
+            var currentTotal = parseFloat(totalElement.getAttribute('data-total'));
+            var newTotal = currentTotal - price;
+            totalElement.setAttribute('data-total', newTotal);
+            totalElement.textContent = 'Total: Php ' + newTotal.toFixed(2);
+            record.remove();
+        }
+    </script> 
+
+
+
+</body>
+</html>
+

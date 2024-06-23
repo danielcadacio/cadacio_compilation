@@ -1,0 +1,98 @@
+/* valero_shop.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header img {
+    height: 150px;
+    width: 150px;
+    border: 0;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#products, #cart {
+    width: 45%;
+}
+
+.product, .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.product img, .cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.product div, .cart-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.product h3, .cart-item span {
+    margin: 0;
+}
+
+.product p, .cart-item span {
+    margin: 5px 0;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#cart-total {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#checkout-btn {
+    padding: 10px;
+    background-color: #28a745;
+}
+
+#checkout-btn:hover {
+    background-color: #218838;
+}

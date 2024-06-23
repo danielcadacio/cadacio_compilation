@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Compilation</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            background-image: url('4.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            margin: 0;
+            padding-top: 60px; 
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #060e1c;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .nav-button {
+            background-color: #141d2e;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s, transform 0.3s, box-shadow 0.5s;
+        }
+        .nav-button:hover {
+            background-color: #ad3e0e;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .nav-button:active {
+            background-color: #964211;
+            transform: scale(0.95);
+        }
+        .section {
+            display: none;
+            flex-direction: column;
+            align-items: center; 
+            padding: 20px;
+            width: 100%;
+            margin-top: 80px; 
+        }
+        .section.active {
+            display: flex;
+        }
+        .sub-section {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            margin-top: 10px;
+        }
+        .sub-section img {
+            width: 200px; 
+            height: auto; 
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .sub-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+        .sub-section img:active {
+            transform: scale(0.95);
+        }
+        .sub-section .label {
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 50px; 
+        }
+        .home-section .label {
+            font-size: 50px;
+            color: #b32400;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function navigateHome() {
+            hideAllSections();
+            document.getElementById('home-section').classList.add('active');
+        }
+        function navigatePrelim() {
+            hideAllSections();
+            document.getElementById('prelim-section').classList.add('active');
+        }
+        function navigateMidterm() {
+            hideAllSections();
+            document.getElementById('midterm-section').classList.add('active');
+        }
+        function navigateFinals() {
+            hideAllSections();
+            document.getElementById('finals-section').classList.add('active');
+        }
+        function hideAllSections() {
+            document.getElementById('home-section').classList.remove('active');
+            document.getElementById('prelim-section').classList.remove('active');
+            document.getElementById('midterm-section').classList.remove('active');
+            document.getElementById('finals-section').classList.remove('active');
+        }
+        function navigatePrelimSub1() {
+            window.location.href = 'CADACIO DANIEL.html';
+        }
+        function navigatePrelimSub2() {
+            window.location.href = 'CADACIO_REG_FORM.html';
+        }
+        function navigateMidtermSub1() {
+            window.location.href = 'restu.html';
+        }
+        
+        function navigateFinalsSub1() {
+            window.location.href = 'Cadacio_PRACTICAL.html';
+        }
+       
+    </script>
+</head>
+<body onload="navigateHome();">
+    <div class="nav-container">
+        <button class="nav-button" onclick="navigateHome();">Home</button>
+        <button class="nav-button" onclick="navigatePrelim();">Prelim</button>
+        <button class="nav-button" onclick="navigateMidterm();">Midterm</button>
+        <button class="nav-button" onclick="navigateFinals();">Finals</button>
+    </div>
+    <div id="home-section" class="section home-section">
+        <h1><div class="label">WELCOME TO MY COMPILTION</div></h1>
+        <div class="label">DANIEL CADACIO JR.</div>
+    </div>
+    <div id="prelim-section" class="section">
+        <div class="sub-section">
+            <img src="resume.png" alt="Prelim Sub1" onclick="navigatePrelimSub1();"> 
+            <div class="label">RESUME</div>
+            <img src="cor.png" alt="Prelim Sub2" onclick="navigatePrelimSub2();"> 
+            <div class="label">COR</div>
+        </div>
+    </div>
+    <div id="midterm-section" class="section">
+        <div class="sub-section">
+            <img src="menu.png" alt="Midterm Sub1" onclick="navigateMidtermSub1();"> 
+            <div class="label">RESTAURANT MENU</div>
+        </div>
+    </div>
+    <div id="finals-section" class="section">
+        <div class="sub-section">
+            <img src="store.png" alt="Finals Sub1" onclick="navigateFinalsSub1();"> <
+            <div class="label">MY STORE</div>
+        </div>
+    </div>
+</body>
+</html>
